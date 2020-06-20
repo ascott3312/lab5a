@@ -53,14 +53,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+   var newProduct1 = parseInt(multiply (a,b));
+   var finalProduct = parseInt (multiply (newProduct1, c));
+   var newProduct2 = parseInt (sum(a,b));
+   var finalProduct2 = parseInt (sum(newProduct2, c));
+   var message = '4 and 7 and 5 sum to ' + finalProduct2 + '.';
+   var message2 = 'The product of 4 and 7 and 5 is ' + finalProduct + '.';
+   return [finalProduct2, finalProduct, message, message2 ]
 }
-
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
-
 /////////////////////////////////////
 /* Problem 4
 Write a function called sumArray() that takes in an array of numbers as its single argument and then returns an array where the first element is the sum of the numbers in the array, and the second element is a string that EXACTLY follows this example and uses the values that were input into the function:
